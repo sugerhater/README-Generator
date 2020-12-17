@@ -12,6 +12,12 @@ const promptUser = () =>
     //   message: '',
     // },
     
+    { //Description
+      type: 'input',
+      name: 'description',
+      message: 'Please describe what your project does:',
+    },
+    
     { //Git hub username
       type: 'input',
       name: 'username',
@@ -30,7 +36,7 @@ const promptUser = () =>
     },
     { //
       type: 'input',
-      name: 'Contributing',
+      name: 'contributing',
       message: 'Please type who contributes into this project:',
     },
     
@@ -64,14 +70,27 @@ const promptUser = () =>
   //email;
 
 const generateREADME= (answers) =>
-`#${answers.title}
+`# ${answers.title}
+
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Questions](#questions)
+- [License](#license)
+
+## Description
 ${answers.description}
-##Installation
+
+## Installation
 ${answers.installation}
-##Usage
+
+## Usage
 ${answers.usage}
-##Contributing
-${answers.Contributing}
+
+## Contributing
+${answers.contributing}
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ##Questions
