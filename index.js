@@ -32,7 +32,7 @@ const promptUser = () =>
     { //Usage
       type: 'input',
       name: 'usage',
-      message: 'type usage',
+      message: 'Please type your usage information:',
     },
     
     { //Git hub username
@@ -52,14 +52,6 @@ const promptUser = () =>
       name: 'email',
       message: 'Which email address you want to put in the README file?',
     },
-
-
-    // { //description
-    //   type: 'input',
-    //   name: 'description',
-    //   message: 'Please type the description of your README file',
-    // },
-
 
     { //license
       type: 'input',
