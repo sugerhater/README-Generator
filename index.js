@@ -12,11 +12,11 @@ const promptUser = () =>
     //   message: '',
     // },
     
-    // { //Git hub username
-    //   type: 'input',
-    //   name: '',
-    //   message: '',
-    // },
+    { //Git hub username
+      type: 'input',
+      name: 'username',
+      message: 'What is your github user name?',
+    },
 
     { // installation instructions
       type: 'input',
@@ -31,7 +31,7 @@ const promptUser = () =>
     { //
       type: 'input',
       name: 'Contributing',
-      message: 'Please type who contribute into this project:',
+      message: 'Please type who contributes into this project:',
     },
     
     {//email 
@@ -67,11 +67,16 @@ const generateREADME= (answers) =>
 `#${answers.title}
 ${answers.description}
 ##Installation
-${installation}
+${answers.installation}
 ##Usage
-${usage}
+${answers.usage}
 ##Contributing
+${answers.Contributing}
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+##Questions
+:octocat: Find me on GitHub: [${answers.username}](https://github.com/${answers.username})
+Email me with any questions: ${answers.email}<br /><br />
 `;
 
 promptUser()
