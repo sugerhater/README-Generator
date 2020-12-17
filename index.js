@@ -11,17 +11,16 @@ const promptUser = () =>
     //   name: '',
     //   message: '',
     // },
+    { //title
+      type: 'input',
+      name: 'title',
+      message: 'What project title do you want to use?',
+    },
     
     { //Description
       type: 'input',
       name: 'description',
       message: 'Please describe what your project does:',
-    },
-    
-    { //Git hub username
-      type: 'input',
-      name: 'username',
-      message: 'What is your github user name?',
     },
 
     { // installation instructions
@@ -29,11 +28,19 @@ const promptUser = () =>
       name: 'installation',
       message: 'Please type installation instructions of your README file:',
     },
-    { //
+
+    { //Usage
       type: 'input',
       name: 'usage',
       message: 'type usage',
     },
+    
+    { //Git hub username
+      type: 'input',
+      name: 'username',
+      message: 'What is your github user name?',
+    },
+    
     { //
       type: 'input',
       name: 'contributing',
@@ -46,24 +53,18 @@ const promptUser = () =>
       message: 'Which email address you want to put in the README file?',
     },
 
-    { //title
-      type: 'input',
-      name: 'title',
-      message: 'What project title do you want to use?',
-    },
 
-    { //description
-      type: 'input',
-      name: 'description',
-      message: 'Please type the description of your README file',
-    },
+    // { //description
+    //   type: 'input',
+    //   name: 'description',
+    //   message: 'Please type the description of your README file',
+    // },
 
 
     { //license
-      type: 'list',
+      type: 'input',
       name: 'license',
-      message: 'Which license do you want to use?',
-      choices: ['ISC','MIT']
+      message: 'Which license do you want to use? ISC, MIT, zLib License or you can go to https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/licensing-a-repository to find the type of license you want.',
     },
 
   ]);
@@ -90,20 +91,18 @@ ${answers.installation}
 ${answers.usage}
 
 ## Contributing
-${answers.contributing}
+:octocat: [${answers.contributing}](https://github.com/${answers.username})
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-##Questions
-:octocat: Find me on GitHub: [${answers.username}](https://github.com/${answers.username})
-Email me with any questions: ${answers.email}<br /><br />
+## Questions
+Find me on GitHub: [${answers.username}](https://github.com/${answers.username})
+✉️Email me with any questions: ${answers.email}
+
+## License
+![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)
 `;
 
 promptUser()
-  .then((answers) => writeFileAsync('./created/README.md',generateREADME(answers)))
+  .then((answers) => writeFileAsync('./tests/README.md',generateREADME(answers)))
   .then(() => console.log('Successfully wrote to README.md'))
   .catch((err)=>console.error(err));
-// get the valus from the user
-// place the values into a pre-defined template
-// write the interpolated template into a file
-//promptUser will return a promize
-//  third party module, local module, node natiave module?
