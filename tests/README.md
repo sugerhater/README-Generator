@@ -1,4 +1,4 @@
-# README Generator
+# README-Generator
 
 ## Table of Contents
 - [Description](#description)
@@ -9,17 +9,16 @@
 - [License](#license)
 
 ## Description
-Write a README Generator with an index.js file and run it with Node to create professional README.md files.
-![hm9](https://user-images.githubusercontent.com/71996574/102562788-d0b16400-40a5-11eb-9ef7-e80d15711fb5.gif)
+Write a READM Generator with an index.js file and run it with Node to create professional README.md files.
 
 ## Installation
 Node, npm install inquirer
 
 ## Usage
-Clone this repo into user local file, and run the index.js file with Node.
+Clone this repo into your local file, and run the index.js file with Node.
 
 ## Contributing
-:octocat: [Kehong Li](https://github.com/sugarhater).
+:octocat: [Kehong Li](https://github.com/sugarhater)
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Questions
