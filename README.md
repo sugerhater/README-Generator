@@ -10,6 +10,7 @@
 
 ## Description
 Write a README Generator with an index.js file and run it with Node to create professional README.md files.
+![hm9](https://user-images.githubusercontent.com/71996574/102562788-d0b16400-40a5-11eb-9ef7-e80d15711fb5.gif)
 
 ## Installation
 Node, npm install inquirer
